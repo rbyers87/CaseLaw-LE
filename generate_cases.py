@@ -2,7 +2,7 @@ import os
 import re
 import json
 
-# ─── CATEGORIES (add new cases here, under the right category) ───
+# ─── CATEGORIES ──────────────────────────────────────────────────────
 categories_config = [
     {
         "name": "Traffic Stops & Vehicle Searches",
@@ -32,7 +32,7 @@ categories_config = [
     }
 ]
 
-# ─── CASE DATA (all 21 entries – keep these exactly as they are) ──
+# ─── ALL 21 CASES ──────────────────────────────────────────────────
 case_data = [
     {
         "id": "terry-v-ohio",
@@ -207,12 +207,12 @@ case_data = [
         "title": "Res Gestae (Doctrine)",
         "citation": "Hearsay Exception",
         "summary": 'Res Gestae is an exception to the hearsay rule. Generally, overheard statements are not allowed into evidence at trial — the person who made the statement must testify. Res Gestae, like a confession, is allowed under certain circumstances. A Res Gestae statement is spontaneous — like blurting out words after an incident or in response to a general question, not as a result of meditation. Example: a person in a crowd shouts "That man running in the red shirt just robbed the bank!" or "I shot him!"',
-        "impact": 'The Supreme Court decision was that the burden was on the government to show consent was voluntary and without coercion which is why it is best to get a video recording of the consent and a signed consent if possible and depending on department or DA policy. In this case the state had proven that the consent was lawful.',
+        "impact": 'Officers may document spontaneous statements made by witnesses or suspects in the heat of the moment, as they may be admissible under the Res Gestae exception. If an officer is questioning a specific person about a particular incident, the response is not Res Gestae and is governed by rules of oral/written statements or confessions.',
         "source": "Common Law Doctrine — Hearsay Exception"
     }
 ]
 
-# ─── HTML TEMPLATE for individual case pages (unchanged) ──────────
+# ─── HTML TEMPLATE (unchanged) ────────────────────────────────────
 TEMPLATE = '''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -424,7 +424,6 @@ TEMPLATE = '''<!DOCTYPE html>
 
 
 def generate_case_files():
-    """Generate individual HTML files for all cases."""
     os.makedirs("cases", exist_ok=True)
     for case in case_data:
         filename = f"cases/{case['id']}.html"
@@ -442,7 +441,6 @@ def generate_case_files():
 
 
 def update_index_categories():
-    """Replace the categories array in index.html with the latest config."""
     index_path = "index.html"
     if not os.path.exists(index_path):
         print("⚠️ index.html not found – skipping categories update.")
@@ -451,14 +449,16 @@ def update_index_categories():
     with open(index_path, 'r', encoding='utf-8') as f:
         content = f.read()
 
-    # Build the new JavaScript categories string
+    # Build the new categories string
     cat_lines = []
     for cat in categories_config:
         cases_json = json.dumps(cat["cases"])  # e.g., '["whren-v-us", ...]'
         cat_lines.append(f'    {{ name: "{cat["name"]}", icon: "{cat["icon"]}", cases: {cases_json} }}')
-    new_js = f'const categories = [\n{",\n".join(cat_lines)}\n];'
+    
+    # Join lines with newline + comma; store in a variable to avoid backslash in f-string expression
+    joined = ",\n".join(cat_lines)
+    new_js = f'const categories = [\n{joined}\n];'
 
-    # Replace the old categories block using regex
     pattern = r'const categories = \[.*?\];'
     new_content = re.sub(pattern, new_js, content, flags=re.DOTALL)
 
