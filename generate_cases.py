@@ -163,6 +163,14 @@ case_data = [
         "source": "SCOTUS, 443 U.S. 47 (1979)"
     },
     {
+        "id": "schneckloth-v-bustamonte",
+        "title": "Schneckloth v. Bustamonte",
+        "citation": "412 U.S. 218 (1973)",
+        "summary": 'The police made a lawful traffic stop based on a headlight and license plate light not working while driving on a public road at 2:40am.  The driver could not produce a driver’s license A front seat passenger Joe Alcala had a license and said that the vehicle belonged to his brother. The police asked Alcala if they could search the vehicle and he consented. The police found some stolen checks wadded up and stuffed under the back seat. Later at trial a back seat passenger, Robert Bustamonte, was convicted of having the stolen checks.  The Supreme Court ruled that when a person is not in custody (so Miranda not required) and gives consent to search, the government has the burden to prove that the consent was voluntary and without coercion. In this case the driver and the brother who was in possession of the vehicle testified that the police had asked for consent and the driver even asked if the police wanted to look in the trunk and glove box and opened the trunk for the police with the key.',
+        "impact": 'The Supreme Court decision was that the burden was on the government to show consent was voluntary and without coercion which is why it is best to get a video recording of the consent and a signed consent if possible and depending on department or DA policy. In this case the state had proven that the consent was lawful.',
+        "source": "https://supreme.justia.com/cases/federal/us/412/218/"
+    },
+    {
         "id": "res-gestae",
         "title": "Res Gestae (Doctrine)",
         "citation": "Hearsay Exception",
