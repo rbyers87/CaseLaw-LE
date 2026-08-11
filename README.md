@@ -1,35 +1,79 @@
-Adding a new case – your new workflow
-Edit generate_cases.py directly on GitHub:
+Here’s exactly what you do (step-by-step)
+1. Open your generate_cases.py on GitHub
+Go to your repository, open generate_cases.py, and click the pencil icon.
 
-Open the file, click the pencil icon.
+2. Scroll all the way down to the end of the case_data list
+You’ll see the last entry is res-gestae. It looks like this:
 
-Scroll down to the case_data list.
+python
+    {
+        "id": "res-gestae",
+        "title": "Res Gestae (Doctrine)",
+        "citation": "Hearsay Exception",
+        "summary": 'Res Gestae is an exception to the hearsay rule...',
+        "impact": 'Officers may document spontaneous statements...',
+        "source": "Common Law Doctrine — Hearsay Exception"
+    }
+]
+3. Add a comma after the } of the last entry, then paste your new case
+Important: add a comma , after the closing } of res-gestae, then paste your new dictionary.
 
-Add a new dictionary entry (copy an existing one and change the values).
+Example – let’s say you received a suggestion for a new case: Smith v. State. You would change the end of the list from this:
 
-Important: the "id" must be unique and match the filename you want (e.g., "new-case" → cases/new-case.html). Use only lowercase letters, numbers, and hyphens.
+python
+    {
+        "id": "res-gestae",
+        "title": "Res Gestae (Doctrine)",
+        "citation": "Hearsay Exception",
+        "summary": '...',
+        "impact": '...',
+        "source": "Common Law Doctrine — Hearsay Exception"
+    }
+]
+to this (added comma and new block):
 
-Commit the change (with a message like “Add new case: …”).
+python
+    {
+        "id": "res-gestae",
+        "title": "Res Gestae (Doctrine)",
+        "citation": "Hearsay Exception",
+        "summary": '...',
+        "impact": '...',
+        "source": "Common Law Doctrine — Hearsay Exception"
+    },
+    {
+        "id": "smith-v-state",
+        "title": "Smith v. State",
+        "citation": "123 U.S. 456 (2026)",
+        "summary": "Officers may not search a vehicle based solely on the odor of burnt popcorn.",
+        "impact": "Requires additional articulable facts beyond a lawful traffic stop to justify a vehicle search.",
+        "source": "SCOTUS, 123 U.S. 456 (2026)"
+    }
+]
+4. (Optional but recommended) Also update the categories list
+If you’re using the updated generate_cases.py I gave earlier (which auto-updates index.html), you also need to add your new case ID to the categories_config list at the top of the file.
 
-The GitHub Action will automatically start and:
+Find the category you want (e.g., 'Traffic Stops & Vehicle Searches') and add your new ID:
 
-Run generate_cases.py
+python
+categories_config = [
+    {
+        "name": "Traffic Stops & Vehicle Searches",
+        "icon": "🚗",
+        "cases": ["whren-v-us", "carroll-v-us", "arizona-v-gant", "pennsylvania-v-mimms", "maryland-v-wilson", "smith-v-state"]
+    },
+    # ... rest of categories
+]
+5. Commit the changes
+Scroll down, write a commit message like “Add new case: Smith v. State”.
 
-Create/update all HTML files in the cases/ folder (including your new one).
+Click Commit changes.
 
-Commit and push the updated cases/ folder back to your repo.
+What happens next?
+GitHub Actions (if you set it up) will run automatically.
 
-Wait 1‑2 minutes for GitHub Pages to redeploy – your new case is live at https://your-username.github.io/repo/cases/new-case.html.
+It will:
 
-4. (Optional) Update the category list in index.html
-Your index.html has hard‑coded categories (categories array in JavaScript). If you want the new case to appear in a specific category, you must also edit index.html and add the new id to that category’s cases array.
-
-How to do that on GitHub:
-
-Open index.html, click the pencil icon.
-
-Find the categories array (near the bottom of the file).
-
-Locate the category you want, and add your new id to its cases list (e.g., 'new-case').
-
-Commit the change. This will not trigger the Action (because you didn’t change generate_cases.py), but it updates the directory page immediately.
+Generate cases/smith-v-state.html (using the data you added).
+(If using the new script) Update the category list in index.html so the new case appears on your homepage.
+GitHub Pages redeploys – your new case is live at https://your-site/cases/smith-v-state.html.
