@@ -18,7 +18,7 @@ categories_config = [
         "name": "Search Warrants & Exceptions",
         "icon": "📜",
         "cases": ["chimel-v-california", "horton-v-california", "minnesota-v-dickerson", "riley-v-california",
-                  "brigham-city-v-stuart", "mincey-v-arizona", "collins-v-virginia", "cady-v-dombrowski"]
+                  "brigham-city-v-stuart", "mincey-v-arizona", "collins-v-virginia", "case-v-montana", "cady-v-dombrowski"]
     },
     {
         "name": "Custody, Miranda & Interrogation",
@@ -217,6 +217,14 @@ case_data = [
         "summary": 'The automobile exception (Carroll Doctrine) does not allow the police to go onto private property near a home (curtilage) to search a readily moveable vehicle.  The police had chased a motorcycle a couple of times in recent weeks but it got away. A tip led the police to Ray Collins’ home where an officer saw a motorcycle under a tarp next to the home. Recognizing a distinctive looking back tire from the chases, an officer lifted the tarp and ran the registration from the VIN. The motorcycle had been reported stolen.',
         "impact": 'In an 8-1 decision the Supreme Court ruled that the automobile exception does not apply within in the curtilage of a home. Effectively it could have just as well been inside of a garage. Entering the curtilage and lifting the tarp was an unlawful search even with probable cause.',
         "source": "https://supreme.justia.com/cases/federal/us/584/16-1027/"
+    },
+    {
+        "id": "case-v-montana",
+        "title": "Case v. Montana",
+        "citation": "607 U.S. ___ (2026)",
+        "summary": 'After receiving a report from his ex-girlfriend that he was threatening suicide and may have shot himself, law enforcement officers in Montana responded to William Case’s home. The officers were aware of Case’s mental health and substance abuse history, as well as prior threats of suicide and confrontations with police. Upon arrival, they received further details about the phone call from Case’s ex-girlfriend, observed an empty handgun holster, a notepad resembling a suicide note, and noted Case’s lack of response to their attempts at contact. Believing Case might be injured or at risk of imminent harm, the officers entered the home without a warrant to render emergency aid. During their search, Case emerged from a closet holding an object that appeared to be a gun, prompting an officer to shoot and injure him. A handgun was found near where Case had been standing.',
+        "impact": 'Police officers may enter a home without a warrant if they have an objectively reasonable basis for believing that someone inside needs emergency assistance, but they do not need to have probable cause for the intrusion.',
+        "source": "https://supreme.justia.com/cases/federal/us/607/24-624/"
     },
     {
         "id": "res-gestae",
