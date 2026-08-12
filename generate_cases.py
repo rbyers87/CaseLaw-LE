@@ -453,7 +453,7 @@ TEMPLATE = '''<!DOCTYPE html>
 def generate_case_files():
     os.makedirs("cases", exist_ok=True)
     for case in case_data:
-        # Format source as clickable link if it's a URL
+        # format source as clickable link if URL
         source_raw = case["source"]
         if source_raw.startswith(("http://", "https://")):
             source_html = f'<a href="{source_raw}" target="_blank" rel="noopener noreferrer">{source_raw}</a>'
@@ -482,16 +482,17 @@ def update_index_categories():
     with open(index_path, 'r', encoding='utf-8') as f:
         content = f.read()
 
-    # Update categories
+    # Build categories with alphabetical sorting
     cat_lines = []
     for cat in categories_config:
-        cases_json = json.dumps(cat["cases"])
+        sorted_cases = sorted(cat["cases"])  # ← SORT HERE
+        cases_json = json.dumps(sorted_cases)
         cat_lines.append(f'    {{ name: "{cat["name"]}", icon: "{cat["icon"]}", cases: {cases_json} }}')
     joined_cats = ",\n".join(cat_lines)
     new_cats_js = f'const categories = [\n{joined_cats}\n];'
     content = re.sub(r'const categories = \[.*?\];', new_cats_js, content, flags=re.DOTALL)
 
-    # Update caseMeta (uses the same case_data)
+    # Build caseMeta (unchanged)
     meta_lines = []
     for case in case_data:
         title_esc = case["title"].replace("'", "\\'")
@@ -505,7 +506,7 @@ def update_index_categories():
     else:
         with open(index_path, 'w', encoding='utf-8') as f:
             f.write(content)
-        print("✅ Updated categories and caseMeta in index.html")
+        print("✅ Updated categories (sorted) and caseMeta in index.html")
 
 def main():
     generate_case_files()
