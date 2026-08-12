@@ -18,7 +18,7 @@ categories_config = [
         "name": "Search Warrants & Exceptions",
         "icon": "📜",
         "cases": ["chimel-v-california", "horton-v-california", "minnesota-v-dickerson", "riley-v-california",
-                  "brigham-city-v-stuart", "mincey-v-arizona", "cady-v-dombrowski"]
+                  "brigham-city-v-stuart", "mincey-v-arizona", "collins-v-virginia", "cady-v-dombrowski"]
     },
     {
         "name": "Custody, Miranda & Interrogation",
@@ -209,6 +209,14 @@ case_data = [
         "summary": 'The stop of a vehicle based solely on the appearance of the people in the vehicle is unconstitutional under the Fourth Amendment.  Felix Brignoni-Ponce was seen driving past Border Patrol agents going in one direction and later in the other direction. Agents saw occupants who who appeared to be Mexican and stopped the vehicle. The passengers were discovered to be illegal immigrants and Brignoni-Ponce was later convicted of knowingly transporting illegal immigrants.',
         "impact": 'A unanimous Supreme Court ruled that there was no reasonable suspicion of a crime and that appearance alone is not a justification to detain someone.',
         "source": "https://supreme.justia.com/cases/federal/us/422/873/"
+    },
+    {
+        "id": "collins-v-virginia",
+        "title": "Collins v. Virginia",
+        "citation": "584 U.S. ___ (2018)",
+        "summary": 'The automobile exception (Carroll Doctrine) does not allow the police to go onto private property near a home (curtilage) to search a readily moveable vehicle.  The police had chased a motorcycle a couple of times in recent weeks but it got away. A tip led the police to Ray Collins’ home where an officer saw a motorcycle under a tarp next to the home. Recognizing a distinctive looking back tire from the chases, an officer lifted the tarp and ran the registration from the VIN. The motorcycle had been reported stolen.',
+        "impact": 'In an 8-1 decision the Supreme Court ruled that the automobile exception does not apply within in the curtilage of a home. Effectively it could have just as well been inside of a garage. Entering the curtilage and lifting the tarp was an unlawful search even with probable cause.',
+        "source": "https://supreme.justia.com/cases/federal/us/584/16-1027/"
     },
     {
         "id": "res-gestae",
