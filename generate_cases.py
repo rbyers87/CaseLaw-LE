@@ -32,7 +32,7 @@ categories_config = [
     }
 ]
 
-# ─── ALL 21 CASES ──────────────────────────────────────────────────
+# ─── ALL CASES (put your full list here) ──────────────────────────
 case_data = [
     {
         "id": "terry-v-ohio",
@@ -220,7 +220,7 @@ case_data = [
     }
 ]
 
-# ─── HTML TEMPLATE (unchanged) ────────────────────────────────────
+# ─── HTML TEMPLATE (updated to use source_html) ──────────────────
 TEMPLATE = '''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -361,8 +361,12 @@ TEMPLATE = '''<!DOCTYPE html>
             font-size: 15px;
             color: #555;
         }}
-        .case-card .source strong {{
+        .case-card .source a {{
             color: #1a3a6e;
+            text-decoration: underline;
+        }}
+        .case-card .source a:hover {{
+            color: #0e2a52;
         }}
         footer {{
             margin-top: 40px;
@@ -418,7 +422,7 @@ TEMPLATE = '''<!DOCTYPE html>
         </div>
 
         <div class="source">
-            <strong>Source:</strong> {source}
+            <strong>Source:</strong> {source_html}
         </div>
     </div>
 
@@ -430,59 +434,67 @@ TEMPLATE = '''<!DOCTYPE html>
 </html>
 '''
 
-
 def generate_case_files():
     os.makedirs("cases", exist_ok=True)
     for case in case_data:
+        # Format source as clickable link if it's a URL
+        source_raw = case["source"]
+        if source_raw.startswith(("http://", "https://")):
+            source_html = f'<a href="{source_raw}" target="_blank" rel="noopener noreferrer">{source_raw}</a>'
+        else:
+            source_html = source_raw
+
         filename = f"cases/{case['id']}.html"
         content = TEMPLATE.format(
             title=case['title'],
             citation=case['citation'],
             summary=case['summary'],
             impact=case['impact'],
-            source=case['source']
+            source_html=source_html
         )
         with open(filename, 'w', encoding='utf-8') as f:
             f.write(content)
         print(f"✅ Generated {filename}")
     print(f"✅ All {len(case_data)} case files generated.")
 
-
 def update_index_categories():
     index_path = "index.html"
     if not os.path.exists(index_path):
-        print("⚠️ index.html not found – skipping categories update.")
+        print("⚠️ index.html not found – skipping update.")
         return
 
     with open(index_path, 'r', encoding='utf-8') as f:
         content = f.read()
 
-    # Build the new categories string
+    # Update categories
     cat_lines = []
     for cat in categories_config:
-        cases_json = json.dumps(cat["cases"])  # e.g., '["whren-v-us", ...]'
+        cases_json = json.dumps(cat["cases"])
         cat_lines.append(f'    {{ name: "{cat["name"]}", icon: "{cat["icon"]}", cases: {cases_json} }}')
-    
-    # Join lines with newline + comma; store in a variable to avoid backslash in f-string expression
-    joined = ",\n".join(cat_lines)
-    new_js = f'const categories = [\n{joined}\n];'
+    joined_cats = ",\n".join(cat_lines)
+    new_cats_js = f'const categories = [\n{joined_cats}\n];'
+    content = re.sub(r'const categories = \[.*?\];', new_cats_js, content, flags=re.DOTALL)
 
-    pattern = r'const categories = \[.*?\];'
-    new_content = re.sub(pattern, new_js, content, flags=re.DOTALL)
+    # Update caseMeta (uses the same case_data)
+    meta_lines = []
+    for case in case_data:
+        title_esc = case["title"].replace("'", "\\'")
+        meta_lines.append(f"    '{case['id']}': {{ title: '{title_esc}', citation: '{case['citation']}' }}")
+    joined_meta = ",\n".join(meta_lines)
+    new_meta_js = f'const caseMeta = {{\n{joined_meta}\n}};'
+    content = re.sub(r'const caseMeta = \{.*?\};', new_meta_js, content, flags=re.DOTALL)
 
-    if new_content == content:
-        print("⚠️ No change made to index.html – pattern not found.")
+    if content == open(index_path, 'r', encoding='utf-8').read():
+        print("⚠️ No change made to index.html.")
     else:
         with open(index_path, 'w', encoding='utf-8') as f:
-            f.write(new_content)
-        print("✅ Updated categories in index.html")
-
+            f.write(content)
+        print("✅ Updated categories and caseMeta in index.html")
 
 def main():
     generate_case_files()
     update_index_categories()
     print("\n🎉 All done!")
-
 
 if __name__ == "__main__":
     main()
