@@ -77,3 +77,5 @@ It will:
 Generate cases/smith-v-state.html (using the data you added).
 (If using the new script) Update the category list in index.html so the new case appears on your homepage.
 GitHub Pages redeploys – your new case is live at https://your-site/cases/smith-v-state.html.
+
+to get website to update, go to dev tools - application - storage - clear website data.  return to the webpage and click ctrl+shift+r and the page should reload showing the update.
