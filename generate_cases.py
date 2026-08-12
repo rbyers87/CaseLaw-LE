@@ -7,7 +7,7 @@ categories_config = [
     {
         "name": "Traffic Stops & Vehicle Searches",
         "icon": "🚗",
-        "cases": ["whren-v-us", "carroll-v-us", "arizona-v-gant", "pennsylvania-v-mimms", "maryland-v-wilson", "schneckloth-v-bustamonte"]
+        "cases": ["whren-v-us", "carroll-v-us", "arizona-v-gant", "pennsylvania-v-mimms", "maryland-v-wilson", "united-states-v-brignoni-ponce", "schneckloth-v-bustamonte"]
     },
     {
         "name": "Reasonable Suspicion & Terry Stops",
@@ -199,8 +199,16 @@ case_data = [
         "title": "Schneckloth v. Bustamonte",
         "citation": "412 U.S. 218 (1973)",
         "summary": 'The police made a lawful traffic stop based on a headlight and license plate light not working while driving on a public road at 2:40am.  The driver could not produce a driver’s license A front seat passenger Joe Alcala had a license and said that the vehicle belonged to his brother. The police asked Alcala if they could search the vehicle and he consented. The police found some stolen checks wadded up and stuffed under the back seat. Later at trial a back seat passenger, Robert Bustamonte, was convicted of having the stolen checks.  The Supreme Court ruled that when a person is not in custody (so Miranda not required) and gives consent to search, the government has the burden to prove that the consent was voluntary and without coercion. In this case the driver and the brother who was in possession of the vehicle testified that the police had asked for consent and the driver even asked if the police wanted to look in the trunk and glove box and opened the trunk for the police with the key.',
-        "impact": 'Officers must have reasonable suspicion to detain someone. A "consensual encounter" is only valid if a reasonable person would feel free to leave or refuse. Commands, forceful tones, or showing authority can turn an encounter into a detention requiring RS.',
+        "impact": 'Officers must have reasonable suspicion to detain someone. A "consensual encounter" is only valid if a reasonable person would feel free to leave or refuse. Commands, forceful tones, or showing authority can turn an encounter into a detention requiring reasonable suspicion.',
         "source": "https://supreme.justia.com/cases/federal/us/412/218/"
+    },
+    {
+        "id": "united-states-v-brignoni-ponce",
+        "title": "United States v. Brignoni-Ponce",
+        "citation": "422 U.S. 873 (1975)",
+        "summary": 'The stop of a vehicle based solely on the appearance of the people in the vehicle is unconstitutional under the Fourth Amendment.  Felix Brignoni-Ponce was seen driving past Border Patrol agents going in one direction and later in the other direction. Agents saw occupants who who appeared to be Mexican and stopped the vehicle. The passengers were discovered to be illegal immigrants and Brignoni-Ponce was later convicted of knowingly transporting illegal immigrants.',
+        "impact": 'A unanimous Supreme Court ruled that there was no reasonable suspicion of a crime and that appearance alone is not a justification to detain someone.',
+        "source": "https://supreme.justia.com/cases/federal/us/422/873/"
     },
     {
         "id": "res-gestae",
