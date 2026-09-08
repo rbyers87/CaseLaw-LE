@@ -9,6 +9,32 @@
       "source": "Common Law Doctrine — Hearsay Exception",
       "category": "4th Amendment & Evidence Rules",
       "action": "update"
+    },
+    {
+      "id": "test",
+      "action": "delete"
+    },
+    {
+      "id": "terry-v-ohio",
+      "title": "Terry v. Ohio",
+      "citation": "392 U.S. 1 (1968)",
+      "summary": "A person can be detained for \"reasonable suspicion\" based on articulable facts. That reasonable suspicion must be based on officer experience and knowledge but must be \"articulable\" — facts that can be described on paper. If you cannot describe those facts so that someone can read and understand them, it does not exist.",
+      "impact": "Establishes the \"Terry stop\" — officers may briefly detain and question individuals based on reasonable suspicion of criminal activity, without probable cause for arrest. The suspicion must be specific and articulable, not a mere hunch.",
+      "source": "SCOTUS, 392 U.S. 1 (1968)",
+      "category": "Reasonable Suspicion & Terry Stops",
+      "submittedBy": "Terry Chance",
+      "action": "update"
+    },
+    {
+      "id": "chimel-v-california",
+      "title": "Chimel v. California",
+      "citation": "395 U.S. 752 (1969)",
+      "summary": "When a person is arrested in his residence, a search of the immediate \"wingspan\" area — where he could hide weapons or evidence — can be searched without a warrant. No other areas of the home may be searched.",
+      "impact": "Defines the scope of a warrantless search incident to arrest inside a home. Officers may only search the area within the arrestee's immediate reach (the \"wingspan\") for officer safety or to prevent destruction of evidence.",
+      "source": "SCOTUS, 395 U.S. 752 (1969)",
+      "category": "Search Warrants & Exceptions",
+      "submittedBy": "Terry Chance",
+      "action": "update"
     }
   ]
 }

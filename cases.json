@@ -7,7 +7,8 @@
       "summary": "A person can be detained for \"reasonable suspicion\" based on articulable facts. That reasonable suspicion must be based on officer experience and knowledge but must be \"articulable\" — facts that can be described on paper. If you cannot describe those facts so that someone can read and understand them, it does not exist.",
       "impact": "Establishes the \"Terry stop\" — officers may briefly detain and question individuals based on reasonable suspicion of criminal activity, without probable cause for arrest. The suspicion must be specific and articulable, not a mere hunch.",
       "source": "SCOTUS, 392 U.S. 1 (1968)",
-      "category": "Reasonable Suspicion & Terry Stops"
+      "category": "Reasonable Suspicion & Terry Stops",
+      "submittedBy": "Terry Chance"
     },
     {
       "id": "chimel-v-california",
@@ -16,7 +17,8 @@
       "summary": "When a person is arrested in his residence, a search of the immediate \"wingspan\" area — where he could hide weapons or evidence — can be searched without a warrant. No other areas of the home may be searched.",
       "impact": "Defines the scope of a warrantless search incident to arrest inside a home. Officers may only search the area within the arrestee's immediate reach (the \"wingspan\") for officer safety or to prevent destruction of evidence.",
       "source": "SCOTUS, 395 U.S. 752 (1969)",
-      "category": "Search Warrants & Exceptions"
+      "category": "Search Warrants & Exceptions",
+      "submittedBy": "Terry Chance"
     },
     {
       "id": "arizona-v-gant",
@@ -25,7 +27,8 @@
       "summary": "When an arrest is made in a vehicle, a wingspan search is not allowed unless it is for evidence related to the reason for arrest. Example: arrest for assault with a deadly weapon → can search for that weapon. Arrest for no driver's license → no wingspan search justified. This does not prevent an inventory search (South Dakota v. Opperman) or probable cause search (Carroll v. US).",
       "impact": "Limits vehicle searches incident to arrest. Officers may only search the passenger compartment if the arrestee is unsecured and within reaching distance, or if they have reason to believe the vehicle contains evidence related to the crime of arrest.",
       "source": "SCOTUS, 556 U.S. 332 (2009)",
-      "category": "Traffic Stops & Vehicle Searches"
+      "category": "Traffic Stops & Vehicle Searches",
+      "submittedBy": ""
     },
     {
       "id": "carroll-v-us",
@@ -34,7 +37,8 @@
       "summary": "If probable cause exists that evidence or contraband is in a moveable vehicle, a warrant is not needed to search any area where that evidence may be found. If the vehicle is not moveable (e.g., in a shop, disabled in a front yard on blocks), the automobile exception does not apply and a warrant is required. Carroll applies on traffic stops where the person can drive away — no time for a warrant.",
       "impact": "Establishes the \"automobile exception\" to the warrant requirement. Because vehicles are mobile and there is a reduced expectation of privacy, officers may search them without a warrant if they have probable cause to believe contraband or evidence is inside.",
       "source": "SCOTUS, 267 U.S. 132 (1925)",
-      "category": "Traffic Stops & Vehicle Searches"
+      "category": "Traffic Stops & Vehicle Searches",
+      "submittedBy": ""
     },
     {
       "id": "whren-v-us",
@@ -43,7 +47,8 @@
       "summary": "In Whren, narcotics officers saw a suspicious vehicle and pulled it over for a traffic violation, leading to a drug conviction. Whren argued the stop was a pretext for drug investigation. A unanimous SCOTUS held that a temporary detention of a motorist is lawful if based on probable cause, even if the stop would not have been made absent some other law enforcement objective.",
       "impact": "Establishes that pretextual stops are constitutional as long as there is probable cause for a traffic violation. Officers may use a traffic stop as a basis for further investigation, provided they have PC for the initial stop.",
       "source": "SCOTUS, 517 U.S. 806 (1996)",
-      "category": "Traffic Stops & Vehicle Searches"
+      "category": "Traffic Stops & Vehicle Searches",
+      "submittedBy": ""
     },
     {
       "id": "wardlow-v-illinois",
@@ -52,7 +57,8 @@
       "summary": "The SCOTUS ruled that \"headlong flight\" from officers is reasonable suspicion under Terry v. Ohio. Officers converged on a known drug area; Wardlow saw them and immediately ran. Officers chased, detained him, and found a gun. The Court ruled that seeing police and immediately fleeing is suspicious and justifies a Terry stop. The Court did not say fleeing is a crime in itself.",
       "impact": "Flight from officers in a high-crime area can contribute to reasonable suspicion for a stop. Officers should rely on state law (e.g., TX Penal Code) for evading detention charges, but flight alone — especially in a known drug area — can justify a brief investigative detention.",
       "source": "SCOTUS, 528 U.S. 119 (2000)",
-      "category": "Reasonable Suspicion & Terry Stops"
+      "category": "Reasonable Suspicion & Terry Stops",
+      "submittedBy": ""
     },
     {
       "id": "florida-v-jl",
@@ -61,7 +67,8 @@
       "summary": "Generally, officers may not even detain a person based solely on an anonymous tip. Example: a call about a person dealing drugs on a corner with a good description, but the reporter is not identified. If the information cannot be independently verified (not merely the description), a detention is unlawful. In J.L., officers had a great description of a guy with a pistol at a specific location. They stopped him and found an illegal firearm. SCOTUS threw out the case because officers had no way of knowing the tip was valid by independent observation before the illegal detention and search.",
       "impact": "An anonymous tip alone, without independent corroboration, does not provide reasonable suspicion for a stop. Officers must observe some corroborating detail (e.g., a bulge, furtive movements) before detaining. There is no \"gun exception\" to the 4th Amendment.",
       "source": "SCOTUS, 529 U.S. 266 (2000)",
-      "category": "Reasonable Suspicion & Terry Stops"
+      "category": "Reasonable Suspicion & Terry Stops",
+      "submittedBy": ""
     },
     {
       "id": "ny-v-quarles",
@@ -70,7 +77,8 @@
       "summary": "Yes, in a very limited circumstance. If the public is in immediate danger AND it is a dynamic situation, asking a question to potentially save a life is allowed. Officers spotted Quarles, a rape suspect. He fled into a store and was arrested. A frisk found an empty shoulder holster. The officer asked where the gun was; Quarles nodded and said \"over there.\" The gun was found. SCOTUS upheld the question as an accomplice might have found the gun and threatened officers or an innocent person (like a child) might have been in danger.",
       "impact": "Creates a \"public safety\" exception to Miranda. Officers may ask questions about immediate safety threats without first giving Miranda warnings, but this exception is narrow and applies only to urgent, dynamic situations where there is a risk to public or officer safety.",
       "source": "SCOTUS, 467 U.S. 649 (1984)",
-      "category": "Custody, Miranda & Interrogation"
+      "category": "Custody, Miranda & Interrogation",
+      "submittedBy": ""
     },
     {
       "id": "kaupp-v-texas",
@@ -79,7 +87,8 @@
       "summary": "Telling people \"magic words\" like \"you are not in custody\" or \"you are being handcuffed for your safety\" does not negate Miranda. The entire circumstances dictate whether someone is in custody. Kaupp was a murder suspect. Deputies went to his home early morning, woke him, said \"we need to talk,\" and brought him to the station in handcuffs (policy for safety). Once there, he was read Miranda and confessed. A unanimous SCOTUS threw out the confession. The consent was not freely given; being awakened and told to talk is intimidating.",
       "impact": "Officers cannot avoid Miranda by simply saying someone is not in custody. Courts look at the totality of circumstances from the perspective of a reasonable person. Handcuffing, transporting to the station, or waking someone at home can all indicate custody, regardless of the officer's words.",
       "source": "SCOTUS, 538 U.S. 626 (2003)",
-      "category": "Custody, Miranda & Interrogation"
+      "category": "Custody, Miranda & Interrogation",
+      "submittedBy": ""
     },
     {
       "id": "muehler-v-mena",
@@ -88,7 +97,8 @@
       "summary": "Unlike Kaupp, police in Muehler had a search warrant. They entered a home with gang members known to be present and handcuffed occupants for safety. Mena contested the detention and questioning as a 4th Amendment violation. A unanimous SCOTUS sided with police, allowing detention of occupants for safety under such a warrant without individual PC or RS on each person.",
       "impact": "When executing a search warrant, officers may detain occupants of the premises for safety reasons without needing individualized reasonable suspicion or probable cause. This is based on the \"Michigan v. Summers\" principle that officers have an interest in preventing flight and ensuring safety during a warrant execution.",
       "source": "SCOTUS, 544 U.S. 93 (2005)",
-      "category": "Custody, Miranda & Interrogation"
+      "category": "Custody, Miranda & Interrogation",
+      "submittedBy": ""
     },
     {
       "id": "horton-v-california",
@@ -97,7 +107,8 @@
       "summary": "Plain view does not simply mean you can see something. It has three requirements: (1) the officer is lawfully present at the location, (2) the officer has a lawful right to access the item, and (3) it must be \"immediately apparent\" that the item is contraband. The officer cannot move or manipulate the item for it to fall under plain view. Example: seeing a television and moving it to see the serial number — if it comes back stolen, that is an illegal search.",
       "impact": "Plain view seizures are only lawful if the incriminating nature of the item is immediately apparent without moving or manipulating it. Officers cannot conduct a warrantless search by moving items to check for evidence; the evidence must be readily observable from a lawful vantage point.",
       "source": "SCOTUS, 496 U.S. 128 (1990)",
-      "category": "Search Warrants & Exceptions"
+      "category": "Search Warrants & Exceptions",
+      "submittedBy": ""
     },
     {
       "id": "minnesota-v-dickerson",
@@ -106,7 +117,8 @@
       "summary": "A unanimous SCOTUS ruled that if an officer lawfully pats down a person and discovers contraband, it can be seized. However, the officer lost the case but set a precedent. Just as with plain view, the officer cannot manipulate the item — it must be \"immediately apparent\" on merely touching the item that it is contraband. Example: feeling a soft baggie while patting for weapons — you cannot roll it around to determine what it is. If you can touch it with a flat hand and immediately know it's contraband, it is lawful to remove it.",
       "impact": "Establishes the \"plain feel\" doctrine. During a lawful Terry frisk, officers may seize contraband if its incriminating nature is immediately apparent through touch. Manipulation beyond a light pat-down to identify an object is not allowed and constitutes an unlawful search.",
       "source": "SCOTUS, 508 U.S. 366 (1993)",
-      "category": "Search Warrants & Exceptions"
+      "category": "Search Warrants & Exceptions",
+      "submittedBy": ""
     },
     {
       "id": "pennsylvania-v-mimms",
@@ -115,7 +127,8 @@
       "summary": "Yes. The SCOTUS ruled that for officer safety, there is no need to articulate reasonable suspicion to remove a driver from a vehicle. To control a scene, you can order a driver out of the vehicle.",
       "impact": "Officers may order a driver out of a vehicle during a traffic stop as a matter of routine safety, without any additional justification. This is a minimal intrusion that is outweighed by officer safety concerns.",
       "source": "SCOTUS, 434 U.S. 106 (1977)",
-      "category": "Traffic Stops & Vehicle Searches"
+      "category": "Traffic Stops & Vehicle Searches",
+      "submittedBy": ""
     },
     {
       "id": "maryland-v-wilson",
@@ -124,7 +137,8 @@
       "summary": "Yes, for the same reasons given in Mimms. The SCOTUS extended the rule to passengers, allowing officers to order passengers out of a vehicle during a traffic stop for officer safety.",
       "impact": "Officers may order passengers out of a vehicle during a traffic stop without needing additional reasonable suspicion. This is a safety measure and applies to all occupants of the vehicle.",
       "source": "SCOTUS, 519 U.S. 408 (1997)",
-      "category": "Traffic Stops & Vehicle Searches"
+      "category": "Traffic Stops & Vehicle Searches",
+      "submittedBy": ""
     },
     {
       "id": "katz-v-us",
@@ -133,7 +147,8 @@
       "summary": "Yes. The 4th Amendment protects people, not places, according to the SCOTUS in a 7-1 ruling. This includes not only physical entry like an officer reaching into an area but any intrusion including electronic transmission such as a phone recording, even in a public place like a public phone booth. A person's right to privacy goes with him.",
       "impact": "Establishes the \"reasonable expectation of privacy\" test. The 4th Amendment protects people, not places. Officers must obtain a warrant before conducting electronic surveillance or searching areas where a person has a legitimate expectation of privacy, even in public spaces.",
       "source": "SCOTUS, 389 U.S. 347 (1967)",
-      "category": "4th Amendment & Evidence Rules"
+      "category": "4th Amendment & Evidence Rules",
+      "submittedBy": ""
     },
     {
       "id": "riley-v-california",
@@ -142,7 +157,8 @@
       "summary": "No. A unanimous SCOTUS ruled that a cell phone is a personal record similar to a home computer and no longer holds only phone calls. It requires a search warrant or consent to search a phone.",
       "impact": "Officers generally cannot search a cell phone incident to arrest without a warrant. The vast amount of personal data on a phone requires a warrant, unless exigent circumstances exist (e.g., destruction of evidence, imminent danger).",
       "source": "SCOTUS, 573 U.S. 373 (2014)",
-      "category": "Search Warrants & Exceptions"
+      "category": "Search Warrants & Exceptions",
+      "submittedBy": ""
     },
     {
       "id": "brigham-city-v-stuart",
@@ -151,7 +167,8 @@
       "summary": "Yes, says a unanimous SCOTUS, if it is with probable cause to stop an assault with \"serious injuries\" or the threat of those injuries. Officers may enter a home without a warrant in an emergency situation to prevent violence or injury.",
       "impact": "The \"emergency aid\" exception allows warrantless entry into a home when officers have probable cause to believe someone is seriously injured or imminently threatened with serious injury. This is a public safety exception to the warrant requirement.",
       "source": "SCOTUS, 547 U.S. 398 (2006)",
-      "category": "Search Warrants & Exceptions"
+      "category": "Search Warrants & Exceptions",
+      "submittedBy": ""
     },
     {
       "id": "mincey-v-arizona",
@@ -160,7 +177,8 @@
       "summary": "There is no homicide exception to the search warrant requirement. Due to the seriousness of the offense, officers might believe a warrant is not needed, but that is incorrect. A right to privacy does not go away with a more serious accusation. At a violent crime scene, officers have the right to check for more victims or a suspect that may be a danger — meaning you can search anywhere a person might be, but not look into other areas. The scene must then be secured and a warrant obtained if there is an expectation of privacy.",
       "impact": "There is no \"homicide scene exception\" to the warrant requirement. Officers may conduct a warrantless search only to the extent necessary to secure the scene and check for victims or suspects. Once the scene is secure, a warrant is required to search further.",
       "source": "SCOTUS, 437 U.S. 385 (1978)",
-      "category": "Search Warrants & Exceptions"
+      "category": "Search Warrants & Exceptions",
+      "submittedBy": ""
     },
     {
       "id": "cady-v-dombrowski",
@@ -169,7 +187,8 @@
       "summary": "The Community Caretaker doctrine allows officers the limited ability to have contraband admissible as evidence without probable cause or consent. If an officer is not providing a law enforcement function but is merely checking on the welfare of a person or situation, contraband discovered in plain view may be evidence. In Dombrowski, police investigated an accident involving an off-duty officer. They entered the car at the wrecker yard to secure a gun for public safety and found bloody clothing that led to a murder charge.",
       "impact": "Officers may act in a \"community caretaker\" role — checking on welfare, securing property, etc. — without needing probable cause. Contraband discovered in plain view during such a non-law-enforcement function may be admissible. This is limited and does not apply to investigative detentions.",
       "source": "SCOTUS, 413 U.S. 433 (1973)",
-      "category": "Search Warrants & Exceptions"
+      "category": "Search Warrants & Exceptions",
+      "submittedBy": ""
     },
     {
       "id": "brown-v-texas",
@@ -178,7 +197,8 @@
       "summary": "Reaffirms Terry v. Ohio and the requirement to have at least reasonable suspicion to force a detention. A consent encounter requires the officer, using no force or threats, to question whether a person wishes to talk. If you tell a person \"Come here,\" \"Stop,\" \"Let me see your hands,\" etc., you have likely detained them. For a consent interaction, phrase it like \"Do you mind speaking to me?\" or \"Do you mind me looking in your pockets?\"",
       "impact": "Officers must have reasonable suspicion to detain someone. A \"consensual encounter\" is only valid if a reasonable person would feel free to leave or refuse. Commands, forceful tones, or showing authority can turn an encounter into a detention requiring RS.",
       "source": "SCOTUS, 443 U.S. 47 (1979)",
-      "category": "Reasonable Suspicion & Terry Stops"
+      "category": "Reasonable Suspicion & Terry Stops",
+      "submittedBy": ""
     },
     {
       "id": "schneckloth-v-bustamonte",
@@ -187,7 +207,8 @@
       "summary": "The police made a lawful traffic stop based on a headlight and license plate light not working while driving on a public road at 2:40am.  The driver could not produce a driver’s license A front seat passenger Joe Alcala had a license and said that the vehicle belonged to his brother. The police asked Alcala if they could search the vehicle and he consented. The police found some stolen checks wadded up and stuffed under the back seat. Later at trial a back seat passenger, Robert Bustamonte, was convicted of having the stolen checks.  The Supreme Court ruled that when a person is not in custody (so Miranda not required) and gives consent to search, the government has the burden to prove that the consent was voluntary and without coercion. In this case the driver and the brother who was in possession of the vehicle testified that the police had asked for consent and the driver even asked if the police wanted to look in the trunk and glove box and opened the trunk for the police with the key.",
       "impact": "Officers must have reasonable suspicion to detain someone. A \"consensual encounter\" is only valid if a reasonable person would feel free to leave or refuse. Commands, forceful tones, or showing authority can turn an encounter into a detention requiring reasonable suspicion.",
       "source": "https://supreme.justia.com/cases/federal/us/412/218/",
-      "category": "Traffic Stops & Vehicle Searches"
+      "category": "Traffic Stops & Vehicle Searches",
+      "submittedBy": ""
     },
     {
       "id": "united-states-v-brignoni-ponce",
@@ -196,7 +217,8 @@
       "summary": "The stop of a vehicle based solely on the appearance of the people in the vehicle is unconstitutional under the Fourth Amendment.  Felix Brignoni-Ponce was seen driving past Border Patrol agents going in one direction and later in the other direction. Agents saw occupants who who appeared to be Mexican and stopped the vehicle. The passengers were discovered to be illegal immigrants and Brignoni-Ponce was later convicted of knowingly transporting illegal immigrants.",
       "impact": "A unanimous Supreme Court ruled that there was no reasonable suspicion of a crime and that appearance alone is not a justification to detain someone.",
       "source": "https://supreme.justia.com/cases/federal/us/422/873/",
-      "category": "Traffic Stops & Vehicle Searches"
+      "category": "Traffic Stops & Vehicle Searches",
+      "submittedBy": ""
     },
     {
       "id": "collins-v-virginia",
@@ -205,7 +227,8 @@
       "summary": "The automobile exception (Carroll Doctrine) does not allow the police to go onto private property near a home (curtilage) to search a readily moveable vehicle.  The police had chased a motorcycle a couple of times in recent weeks but it got away. A tip led the police to Ray Collins’ home where an officer saw a motorcycle under a tarp next to the home. Recognizing a distinctive looking back tire from the chases, an officer lifted the tarp and ran the registration from the VIN. The motorcycle had been reported stolen.",
       "impact": "In an 8-1 decision the Supreme Court ruled that the automobile exception does not apply within in the curtilage of a home. Effectively it could have just as well been inside of a garage. Entering the curtilage and lifting the tarp was an unlawful search even with probable cause.",
       "source": "https://supreme.justia.com/cases/federal/us/584/16-1027/",
-      "category": "Search Warrants & Exceptions"
+      "category": "Search Warrants & Exceptions",
+      "submittedBy": ""
     },
     {
       "id": "case-v-montana",
@@ -214,7 +237,8 @@
       "summary": "After receiving a report from his ex-girlfriend that he was threatening suicide and may have shot himself, law enforcement officers in Montana responded to William Case’s home. The officers were aware of Case’s mental health and substance abuse history, as well as prior threats of suicide and confrontations with police. Upon arrival, they received further details about the phone call from Case’s ex-girlfriend, observed an empty handgun holster, a notepad resembling a suicide note, and noted Case’s lack of response to their attempts at contact. Believing Case might be injured or at risk of imminent harm, the officers entered the home without a warrant to render emergency aid. During their search, Case emerged from a closet holding an object that appeared to be a gun, prompting an officer to shoot and injure him. A handgun was found near where Case had been standing.",
       "impact": "Police officers may enter a home without a warrant if they have an objectively reasonable basis for believing that someone inside needs emergency assistance, but they do not need to have probable cause for the intrusion.",
       "source": "https://supreme.justia.com/cases/federal/us/607/24-624/",
-      "category": "Search Warrants & Exceptions"
+      "category": "Search Warrants & Exceptions",
+      "submittedBy": ""
     },
     {
       "id": "res-gestae",
@@ -223,7 +247,8 @@
       "summary": "Res Gestae is an exception to the hearsay rule. Generally, overheard statements are not allowed into evidence at trial — the person who made the statement must testify. Res Gestae, like a confession, is allowed under certain circumstances. A Res Gestae statement is spontaneous — like blurting out words after an incident or in response to a general question, not as a result of meditation. Example: a person in a crowd shouts \"That man running in the red shirt just robbed the bank!\" or \"I shot him!\"",
       "impact": "Officers may document spontaneous statements made by witnesses or suspects in the heat of the moment, as they may be admissible under the Res Gestae exception. If an officer is questioning a specific person about a particular incident, the response is not Res Gestae and is governed by rules of oral/written statements or confessions.",
       "source": "Common Law Doctrine — Hearsay Exception",
-      "category": "4th Amendment & Evidence Rules"
+      "category": "4th Amendment & Evidence Rules",
+      "submittedBy": ""
     }
   ]
 }

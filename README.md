@@ -28,7 +28,10 @@ The admin page also has an **✏️ Existing cases** section listing every publi
 1. Open `admin.html` and sign in.
 2. Scroll to **Existing cases** and click a case to expand it.
 3. Edit the **Title, Citation, Source, Category, Summary**, or **Impact on Law Enforcement**, then click **💾 Save edits** — or click **🗑 Delete case** to remove it entirely.
-4. Changes are written to `edits.json`, which triggers the GitHub Actions workflow to regenerate the site (updating the homepage, reference page, and the individual case page). Edits to existing cases are stored as overrides in `edits.json` and applied on top of the base data in `generate_cases.py`.
+4. Each case also has a **Submitted by** field showing who submitted it, so you know who to check with if a correction is needed.
+5. Changes are written to `edits.json`, which triggers the GitHub Actions workflow to regenerate the site (updating the homepage, reference page, and the individual case page). Edits to existing cases are stored as overrides in `edits.json` and applied on top of the base data in `generate_cases.py`.
+
+> **Credit on case pages:** user-submitted cases show a small "Submitted by" credit with the submitter's initials on the case file page. Internally-authored cases show no credit line.
 
 ### Creating a GitHub token for the admin page
 1. GitHub → Settings → Developer settings → **Personal access tokens → Fine-grained tokens** → *Generate new token*.

@@ -812,6 +812,7 @@
                     </div>
                     <div class="field"><label>Summary *</label><textarea data-f="summary">${escapeHtml(c.summary)}</textarea></div>
                     <div class="field"><label>Impact on Law Enforcement *</label><textarea data-f="impact">${escapeHtml(c.impact)}</textarea></div>
+                    <div class="field"><label>Submitted by (who to check with)</label><input type="text" data-f="submittedBy" value="${escapeAttr(c.submittedBy || '')}"></div>
                 `;
             }
 
@@ -890,6 +891,7 @@
                             impact: f.impact,
                             source: f.source || 'Not provided',
                             category: f.category,
+                            submittedBy: f.submittedBy || '',
                             action: 'update'
                         });
                         setStatus(statusEl, '✅ Saved. The site is regenerating…', 'success');

@@ -1,3 +1,14 @@
 {
-  "approved": []
+  "approved": [
+    {
+      "id": "test",
+      "title": "test",
+      "citation": "Not provided",
+      "summary": "this is a test",
+      "impact": "test",
+      "source": "Not provided",
+      "category": "4th Amendment & Evidence Rules",
+      "submittedBy": "Ryan B."
+    }
+  ]
 }

@@ -331,9 +331,6 @@ TEMPLATE = '''<!DOCTYPE html>
             background: #e9f0fd;
             text-decoration: underline;
         }}
-        .back-link::before {{
-            content: '← ';
-        }}
         .case-card {{
             background: white;
             border-radius: 5px;
@@ -385,6 +382,28 @@ TEMPLATE = '''<!DOCTYPE html>
         }}
         .case-card .source a:hover {{
             color: #0e2a52;
+        }}
+        .case-submitter {{
+            margin-top: 14px;
+            padding-top: 14px;
+            border-top: 1px dashed #ddd;
+            font-size: 13px;
+            color: #888;
+            text-align: center;
+        }}
+        .case-submitter .submitter-initials {{
+            display: inline-block;
+            background: #1a3a6e;
+            color: #fff;
+            font-weight: 600;
+            border-radius: 50%;
+            width: 34px;
+            height: 34px;
+            line-height: 34px;
+            text-align: center;
+            margin-left: 6px;
+            font-size: 13px;
+            vertical-align: middle;
         }}
         .disclaimer {{
             background: #fff3cd;
@@ -516,6 +535,8 @@ TEMPLATE = '''<!DOCTYPE html>
         <div class="source">
             <strong>Source:</strong> {source_html}
         </div>
+
+        {submitted_by_html}
 
         <div class="disclaimer">
             <strong>⚠️ Legal disclaimer:</strong> Some content on this site is contributed by users and may not have been independently verified. Case summaries and legal analysis are provided for general reference and training purposes only — they are not legal advice. Always consult current primary sources (court opinions, statutes, and department policy) before relying on any information here.
@@ -670,6 +691,7 @@ def load_approved_submissions():
             "summary": case.get("summary", ""),
             "impact": case.get("impact", ""),
             "source": case.get("source", ""),
+            "submittedBy": case.get("submittedBy", ""),
         })
         existing_ids.add(cid)
         added += 1
@@ -731,7 +753,7 @@ def load_edits():
         case = by_id.get(cid)
         if case is None:
             continue
-        for field in ("title", "citation", "summary", "impact", "source"):
+        for field in ("title", "citation", "summary", "impact", "source", "submittedBy"):
             if edit.get(field):
                 case[field] = edit[field]
         # move to a different category if requested
@@ -751,6 +773,17 @@ def load_edits():
     if applied:
         print(f"✅ Applied {applied} edit(s) from edits.json")
 
+def get_initials(text):
+    """Derive a short set of initials from a submitter's name/email for credit."""
+    import re
+    text = (text or "").strip()
+    if not text:
+        return ""
+    name = text.split("@")[0]  # strip an email domain if present
+    words = re.findall(r"[A-Za-z]+", name)
+    initials = "".join(w[0].upper() for w in words[:2])
+    return initials or ""
+
 def generate_case_files():
     os.makedirs("cases", exist_ok=True)
     for case in case_data:
@@ -761,6 +794,18 @@ def generate_case_files():
         else:
             source_html = source_raw
 
+        # optional credit line for user-submitted cases
+        submitted_by = (case.get("submittedBy") or "").strip()
+        placeholder_vals = {"not provided", "n/a", "na", "anonymous", "-"}
+        if submitted_by and submitted_by.lower() not in placeholder_vals:
+            initials = get_initials(submitted_by)
+            submitted_by_html = (
+                f'<div class="case-submitter">Submitted by '
+                f'<span class="submitter-initials">{initials}</span></div>'
+            )
+        else:
+            submitted_by_html = ""
+
         filename = f"cases/{case['id']}.html"
         content = TEMPLATE.format(
             title=case['title'],
@@ -768,6 +813,7 @@ def generate_case_files():
             summary=case['summary'],
             impact=case['impact'],
             source_html=source_html,
+            submitted_by_html=submitted_by_html,
             case_id_json=json.dumps(case['id']),
             case_title_json=json.dumps(case['title'])
         )
@@ -862,7 +908,8 @@ def write_cases_json():
             "summary": case["summary"],
             "impact": case["impact"],
             "source": case["source"],
-            "category": cat["name"] if cat else ""
+            "category": cat["name"] if cat else "",
+            "submittedBy": case.get("submittedBy", "")
         })
     with open("cases.json", "w", encoding="utf-8") as f:
         json.dump({"cases": cases}, f, ensure_ascii=False, indent=2)
