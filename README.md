@@ -56,3 +56,5 @@ To get the website to update, go to DevTools → Application → Storage → cle
 
 - The old online form submission (Formspree) has been replaced by the admin workflow above.
 - Badges and all icon/favicon assets live in `/assets` (including the PWA manifest `assets/site.webmanifest`). If you add a new case file or asset, remember to add it to the `urlsToCache` list in `sw.js` and bump `CACHE_NAME`.
+
+## it uses a GitHub-authenticated path (issue created directly) when the admin's own browser has an active session token, and falls back to localStorage for everyone else, with a "Local submissions" queue in the admin page for those. It doesn't use any external service — just GitHub Issues plus that local fallback, exactly like you described. Let me build the same thing here.
